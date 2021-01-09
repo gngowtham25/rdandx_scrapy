@@ -18,4 +18,9 @@ After cloning the repository, run following commands
 
 
 ### Task 2 : Run Data Extraction in JSON format Script:
-1. Execute `python extract_data.py`
+
+1. Execute `python extract_data.py --content=false --receiver_mail=hr@rdand.com`
+
+**Arguments**:
+- --content : Send mail with all text content (Huge size - 10x). Default value is false. If it is set to true, files will be sent with all text content of the page.
+- --receiver_mail : Mail address of the receiver.
