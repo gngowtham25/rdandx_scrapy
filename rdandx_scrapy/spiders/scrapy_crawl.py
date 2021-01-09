@@ -1,16 +1,19 @@
 
 import scrapy
 import logging
-logger = logging.getLogger('mycustomlogger')
+logger = logging.getLogger('scrapy_crawl')
 logger.setLevel('ERROR')
 import pymongo
 from datetime import datetime
 
 headers = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:48.0) Gecko/20100101 Firefox/48.0'}
 
-
 #Initialise Database Connection
-mongoClient = pymongo.MongoClient("mongodb://localhost:27017/")
+mongoClient = pymongo.MongoClient("mongodb://localhost:27017/", serverSelectionTimeoutMS=10)
+try:
+    mongoClient.server_info()
+except Exception as e:
+    raise e
 mongoDB = mongoClient["rdandx"]
 contentCollection = mongoDB['contentMaster']
 
