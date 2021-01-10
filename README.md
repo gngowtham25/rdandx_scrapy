@@ -12,10 +12,18 @@ After cloning the repository, run following commands
 1. Create virtualenv `python2.7 -m virtualenv venv`
 2. Activate virutalenv `source venv/bin/activate` 
 2. Run `pip install -r requirements.txt` 
-
+***
 ### Task 1 : Run Scrapy Script:
 1.  Execute following command `scrapy crawl firstpost` 
 
+> Check the code  - rdandx_scrapy/spiders/scrapy_crawl.py
+
+###### Check MongoDB with following commands in another terminal:
+- `mongo` - Start Mongo DB session
+- `use rdandx` - Switch to rdandx Database
+- `db.contentMaster.find().count()` - Check number of contents in Content Master Collection
+
+***
 
 ### Task 2 : Run Data Extraction in JSON format Script:
 
@@ -24,3 +32,4 @@ After cloning the repository, run following commands
 **Arguments**:
 - --content : Send mail with all text content (Huge size - 10x). Default value is false. If it is set to true, files will be sent with all text content of the page.
 - --receiver_mail : Mail address of the receiver.
+> Check the code  - extract_data.py
