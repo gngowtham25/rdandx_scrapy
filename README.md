@@ -8,7 +8,7 @@ Scrapy Parser is used to scrape all pages of firstpost and store contents, links
 - Start Mongo DB server. For Mac, `brew services start mongodb-community@4.4`. For Linux, `sudo systemctl start mongod` 
 
 ### Setup:
-After cloning the repository, run following commands
+After cloning the repository, cd into project directory and run following commands
 1. Create virtualenv `python2.7 -m virtualenv venv`
 2. Activate virutalenv `source venv/bin/activate` 
 2. Run `pip install -r requirements.txt` 
